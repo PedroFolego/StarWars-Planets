@@ -3,7 +3,20 @@ import Context from '../context/Context';
 import Planet from './Planet';
 
 function Table() {
-  const { planets, inputText } = useContext(Context);
+  const { planets, inputText, filterByNumericValues } = useContext(Context);
+
+  const filterByNumeric = (planet) => {
+    const arrBool = filterByNumericValues.map((filter) => {
+      const { comparison, column, value } = filter;
+
+      if (comparison === 'maior que') return Number(planet[column]) > Number(value);
+      if (comparison === 'menor que') return Number(planet[column]) < Number(value);
+      if (comparison === 'igual a') return Number(planet[column]) === Number(value);
+      return true;
+    });
+    return arrBool.every((bool) => bool);
+  };
+
   return (
     <table>
       <thead>
@@ -25,6 +38,7 @@ function Table() {
       </thead>
       <tbody>
         {planets
+          .filter(filterByNumeric)
           .filter(({ name }) => name.includes(inputText))
           .map((planet) => <Planet key={ planet.name } planet={ planet } />)}
       </tbody>

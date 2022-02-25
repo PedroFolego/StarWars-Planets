@@ -31,7 +31,8 @@ function Provider({ children }) {
         { planets,
           inputText,
           handleInputTextName,
-          handleFilterNumericValues }
+          handleFilterNumericValues,
+          filterByNumericValues }
       }
     >
       {children}
