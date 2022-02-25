@@ -1,0 +1,20 @@
+.nav-inputs {
+  background-color: bisque;
+  margin-top: 10px;
+  width: 98%;
+  display: grid;
+  justify-self: center;
+  border-radius: 20px;
+  padding: 30px;
+  grid-template-columns: 10% 25% 15% 15% 25% 10%;
+}
+
+.label__nav {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.placeholder__inputs {
+  background-color: #1C1F23;
+  color: white;
+}

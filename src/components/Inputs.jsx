@@ -1,5 +1,6 @@
 import React, { useContext, useState } from 'react';
 import Context from '../context/Context';
+import '../styles/Inputs.css';
 
 function Inputs() {
   const {
@@ -9,20 +10,16 @@ function Inputs() {
 
   const [columnFilter, setColumnFilter] = useState({
     column: 'population',
-    comparison: 'maior que',
+    comparison: '',
     value: '0',
   });
-  const [optionInputs] = useState([
-    <option key="population">population</option>,
-    <option key="orbital_period">orbital_period</option>,
-    <option key="rotation_period">rotation_period</option>,
-    <option key="diameter">diameter</option>,
-    <option key="surface_water">surface_water</option>,
-  ]);
+  const optionInputs = [
+    'population', 'orbital_period', 'rotation_period', 'diameter', 'surface_water',
+  ];
 
   const filterOptions = (option) => (
     !filterByNumericValues
-      .some(({ column }) => column === option.key)
+      .some(({ column }) => column === option)
   );
 
   const handleChange = ({ target: { id, value } }) => {
@@ -35,10 +32,12 @@ function Inputs() {
   };
 
   return (
-    <div>
-      {console.log(filterByNumericValues)}
-      <label htmlFor="inputText">
+    <nav className="nav-inputs">
+      <label htmlFor="inputText" className="label__nav">
+        Nome do Planeta
         <input
+          className="form-control  placeholder__inputs"
+          placeholder="Digite o nome do planeta"
           id="inputText"
           data-testid="name-filter"
           type="text"
@@ -46,30 +45,38 @@ function Inputs() {
           value={ inputText }
         />
       </label>
-      <label htmlFor="column">
+      <label htmlFor="column" className="label__nav">
+        Busca por categoria
         <select
+          className="form-select placeholder__inputs"
           id="column"
           data-testid="column-filter"
-          onClick={ handleChange }
+          onChange={ handleChange }
         >
           {optionInputs
             .filter(filterOptions)
-            .map((option) => option)}
+            .map((option) => (
+              <option key={ option }>{option}</option>
+            ))}
         </select>
       </label>
-      <label htmlFor="comparison">
+      <label htmlFor="comparison" className="label__nav">
+        Comparação
         <select
+          className="form-select placeholder__inputs"
           id="comparison"
           data-testid="comparison-filter"
-          onClick={ handleChange }
+          onChange={ handleChange }
         >
           <option value="maior que">maior que</option>
           <option value="menor que">menor que</option>
           <option value="igual a">igual a</option>
         </select>
       </label>
-      <label htmlFor="value">
+      <label htmlFor="value" className="label__nav">
+        Quantidade
         <input
+          className="form-control placeholder__inputs"
           id="value"
           data-testid="value-filter"
           type="number"
@@ -78,13 +85,14 @@ function Inputs() {
         />
       </label>
       <button
+        className="btn btn-dark"
         type="button"
         onClick={ submitInputsNumericValues }
         data-testid="button-filter"
       >
         filtrar
       </button>
-    </div>
+    </nav>
   );
 }
 

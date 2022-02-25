@@ -1,0 +1,23 @@
+.App {
+  text-align: center;
+  display: grid;
+  color: white;
+}
+
+.starwars {
+  display: grid;
+}
+
+.header__img {
+  display: grid;
+  grid-template-rows: 100%;
+  margin-top: 10px;
+  width: 100%;
+}
+
+.img {
+  background-color: aliceblue;
+  border: 1px solid white;
+  grid-row: 1;
+  justify-self: center;
+}

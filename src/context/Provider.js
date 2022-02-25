@@ -17,13 +17,17 @@ function Provider({ children }) {
     getPlanetsFromAPI();
   }, []);
 
-  const handleInputTextName = ({ target: { value } }) => {
-    setInputText(value);
-  };
+  const handleInputTextName = ({ target: { value } }) => setInputText(value);
 
   const handleFilterNumericValues = (obj) => {
     setfilterByNumericValues([...filterByNumericValues, obj]);
   };
+
+  const removeFilter = (column) => (setfilterByNumericValues(
+    filterByNumericValues.filter((filter) => filter.column !== column),
+  ));
+
+  const removeAllFilter = () => setfilterByNumericValues([]);
 
   return (
     <Context.Provider
@@ -32,7 +36,9 @@ function Provider({ children }) {
           inputText,
           handleInputTextName,
           handleFilterNumericValues,
-          filterByNumericValues }
+          filterByNumericValues,
+          removeFilter,
+          removeAllFilter }
       }
     >
       {children}

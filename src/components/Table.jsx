@@ -4,7 +4,6 @@ import Planet from './Planet';
 
 function Table() {
   const { planets, inputText, filterByNumericValues } = useContext(Context);
-
   const filterByNumeric = (planet) => {
     const arrBool = filterByNumericValues.map((filter) => {
       const { comparison, column, value } = filter;
