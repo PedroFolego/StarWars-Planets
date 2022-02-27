@@ -4,17 +4,13 @@ import Planet from './Planet';
 
 function Table() {
   const { planets, inputText, filterByNumericValues } = useContext(Context);
-  const filterByNumeric = (planet) => {
-    const arrBool = filterByNumericValues.map((filter) => {
-      const { comparison, column, value } = filter;
+  const filterByNumeric = (planet) => filterByNumericValues.every((filter) => {
+    const { comparison, column, value } = filter;
 
-      if (comparison === 'maior que') return Number(planet[column]) > Number(value);
-      if (comparison === 'menor que') return Number(planet[column]) < Number(value);
-      if (comparison === 'igual a') return Number(planet[column]) === Number(value);
-      return true;
-    });
-    return arrBool.every((bool) => bool);
-  };
+    if (comparison === 'maior que') return Number(planet[column]) > Number(value);
+    if (comparison === 'menor que') return Number(planet[column]) < Number(value);
+    return Number(planet[column]) === Number(value);
+  });
 
   return (
     <table>

@@ -1,12 +1,12 @@
 .nav-inputs {
   background-color: bisque;
-  margin-top: 10px;
-  width: 98%;
-  display: grid;
-  justify-self: center;
   border-radius: 20px;
-  padding: 30px;
+  display: grid;
   grid-template-columns: 10% 25% 15% 15% 25% 10%;
+  justify-self: center;
+  margin-top: 10px;
+  padding: 30px;
+  width: 98%;
 }
 
 .label__nav {
@@ -15,6 +15,6 @@
 }
 
 .placeholder__inputs {
-  background-color: #1C1F23;
+  background-color: #1c1f23;
   color: white;
 }

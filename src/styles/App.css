@@ -1,7 +1,7 @@
 .App {
-  text-align: center;
-  display: grid;
   color: white;
+  display: grid;
+  text-align: center;
 }
 
 .starwars {
