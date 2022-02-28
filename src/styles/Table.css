@@ -1,0 +1,20 @@
+.table {
+  background-color: #8ed8fc;
+  border: solid 1px black;
+  margin-top: 20px;
+}
+
+.thead {
+  background-color: #2e4558;
+  color: #e89e10;
+  text-align: center;
+}
+
+.thead tr > th {
+  border: 1px solid black;
+}
+
+.tbody tr > td {
+  border: 1px solid black;
+  text-align: center;
+}

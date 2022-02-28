@@ -18,8 +18,7 @@ function Inputs() {
   ];
 
   const filterOptions = (option) => (
-    !filterByNumericValues
-      .some(({ column }) => column === option)
+    !filterByNumericValues.some(({ column }) => column === option)
   );
 
   const handleChange = ({ target: { id, value } }) => {
@@ -33,7 +32,7 @@ function Inputs() {
 
   return (
     <nav className="nav-inputs">
-      <label htmlFor="inputText" className="label__nav">
+      <label htmlFor="inputText" className="label__nav inputText">
         Nome do Planeta
         <input
           className="form-control  placeholder__inputs"
@@ -45,13 +44,13 @@ function Inputs() {
           value={ inputText }
         />
       </label>
-      <label htmlFor="column" className="label__nav">
+      <label htmlFor="column" className="label__nav inputColumn">
         Busca por categoria
         <select
           className="form-select placeholder__inputs"
           id="column"
           data-testid="column-filter"
-          onChange={ handleChange }
+          onClick={ handleChange }
         >
           {optionInputs
             .filter(filterOptions)
@@ -60,20 +59,20 @@ function Inputs() {
             ))}
         </select>
       </label>
-      <label htmlFor="comparison" className="label__nav">
+      <label htmlFor="comparison" className="label__nav inputComparison">
         Comparação
         <select
           className="form-select placeholder__inputs"
           id="comparison"
           data-testid="comparison-filter"
-          onChange={ handleChange }
+          onClick={ handleChange }
         >
           <option value="maior que">maior que</option>
           <option value="menor que">menor que</option>
           <option value="igual a">igual a</option>
         </select>
       </label>
-      <label htmlFor="value" className="label__nav">
+      <label htmlFor="value" className="label__nav inputValue">
         Quantidade
         <input
           className="form-control placeholder__inputs"
@@ -85,7 +84,7 @@ function Inputs() {
         />
       </label>
       <button
-        className="btn btn-dark"
+        className="btn btn-dark btnSubmit"
         type="button"
         onClick={ submitInputsNumericValues }
         data-testid="button-filter"

@@ -1,0 +1,22 @@
+.filters {
+  display: grid;
+  width: 95%;
+  justify-self: center;
+  grid-template-columns: 60% 40%;
+}
+
+.filter {
+  margin-top: 10px;
+  grid-column: 1;
+  display: flex;
+  background-color: #54ad7a;
+  width: fit-content;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+}
+
+.name-filter {
+  align-self: center;
+  justify-self: center;
+}

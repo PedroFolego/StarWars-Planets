@@ -1,9 +1,11 @@
 import React, { useContext } from 'react';
 import Context from '../context/Context';
 import Planet from './Planet';
+import '../styles/Table.css';
 
 function Table() {
   const { planets, inputText, filterByNumericValues } = useContext(Context);
+
   const filterByNumeric = (planet) => filterByNumericValues.every((filter) => {
     const { comparison, column, value } = filter;
 
@@ -13,10 +15,10 @@ function Table() {
   });
 
   return (
-    <table>
-      <thead>
+    <table className="table">
+      <thead className="thead">
         <tr>
-          <th>Nome</th>
+          <th className="th">Nome</th>
           <th>Climate</th>
           <th>Created</th>
           <th>Diameter</th>
@@ -31,7 +33,7 @@ function Table() {
           <th>URL</th>
         </tr>
       </thead>
-      <tbody>
+      <tbody className="tbody">
         {planets
           .filter(filterByNumeric)
           .filter(({ name }) => name.includes(inputText))

@@ -4,6 +4,7 @@ import Provider from './context/Provider';
 import Table from './components/Table';
 import Inputs from './components/Inputs';
 import Filters from './components/Filters';
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Inputs />
         <Filters />
         <Table />
+        <Footer />
       </div>
     </Provider>
   );
