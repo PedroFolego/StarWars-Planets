@@ -1,4 +1,4 @@
-# My Awesome Project
+# Star Wars Planets
 
 # Contexto
 Este projeto trata-se um aplicativo de filtragem dos planetas do Star Wars
