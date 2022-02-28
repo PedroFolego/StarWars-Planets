@@ -1,7 +1,7 @@
 # Star Wars Planets
 
 # Contexto
-Este projeto trata-se um aplicativo de filtragem dos planetas do Star Wars
+Este projeto trata-se um aplicativo de filtragem dos planetas do universo Star Wars.
 
 ## Técnologias usadas
 
