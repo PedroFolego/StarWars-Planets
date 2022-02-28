@@ -1,12 +1,12 @@
 .table {
-  background-color: #8ed8fc;
+  background-color: #2e4558;
   border: solid 1px black;
   margin-top: 20px;
 }
 
 .thead {
-  background-color: #2e4558;
-  color: #e89e10;
+  background-color: #8ed8fc;
+  color: #2e4558;
   text-align: center;
 }
 
@@ -17,4 +17,8 @@
 .tbody tr > td {
   border: 1px solid black;
   text-align: center;
+}
+
+.tbody tr {
+  color: rgb(223, 223, 223);
 }

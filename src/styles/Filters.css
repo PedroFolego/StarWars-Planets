@@ -1,22 +1,44 @@
-.filters {
+.nav__filters {
   display: grid;
-  width: 95%;
-  justify-self: center;
   grid-template-columns: 60% 40%;
+  justify-self: center;
+  width: 95%;
 }
 
-.filter {
-  margin-top: 10px;
-  grid-column: 1;
-  display: flex;
-  background-color: #54ad7a;
-  width: fit-content;
+.filters {
   align-items: center;
+  display: flex;
+  grid-column: 1;
   justify-content: center;
+  margin-top: 10px;
   padding: 5px;
 }
 
+.filter {
+  align-items: center;
+  background-color: #8ed8fc;
+  border-radius: 30px;
+  display: flex;
+  height: 60px;
+  justify-content: center;
+  margin-left: 10px;
+  padding: 10px;
+}
+
 .name-filter {
+  font-weight: 700;
+  margin: 0 5px 0  0;
+}
+
+.btn-removeFilter {
+  border-radius: 20px;
+}
+
+.btn-deleteAll {
   align-self: center;
+  border-radius: 20px;
+  grid-column: 2;
+  height: 60px;
   justify-self: center;
+  margin-top: 10px;
 }
