@@ -18,7 +18,7 @@ function Table() {
     <table className="table">
       <thead className="thead">
         <tr>
-          <th className="th">Nome</th>
+          <th>Nome</th>
           <th>Climate</th>
           <th>Created</th>
           <th>Diameter</th>

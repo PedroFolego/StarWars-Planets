@@ -6,14 +6,12 @@
 
 .starwars {
   display: grid;
-  width: 100%;
 }
 
 .header__img {
   display: grid;
   grid-template-rows: 100%;
   margin-top: 10px;
-  width: 100%;
 }
 
 .img {

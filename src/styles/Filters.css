@@ -2,7 +2,7 @@
   display: grid;
   grid-template-columns: 60% 40%;
   justify-self: center;
-  width: 95%;
+  width: 95vw;
 }
 
 .filters {
