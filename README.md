@@ -1,24 +1,23 @@
 # Star Wars Planets
 
-# Contexto
-Este projeto trata-se um aplicativo de filtragem dos planetas do universo Star Wars.
+### Contexto
+Este projeto trata-se um aplicativo dos planetas do universo Star Wars.
+Nele é possível explorar pelos diversos planetas de StarWars, ver suas informações, aprender sobre eles e descobrir assuntos relacionados relacionados. 
 
-## Técnologias usadas
+### Técnologias usadas
 
-Front-end:
-> Desenvolvido usando: React, Redux, CSS3, HTML5, ES6
+> Desenvolvido usando: React, Context, CSS3, HTML5, ES6
 
 
-## Instalando Dependências
+### Instalando Dependências
  
-> Frontend
 ```bash
 cd src/
 npm install
 ``` 
-## Executando aplicação
+### Executando aplicação
 
-* Para rodar o front-end:
+* Para rodar a aplicação:
 
   ```
     cd src/ && npm start
