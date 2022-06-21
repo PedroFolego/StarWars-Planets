@@ -2,7 +2,7 @@
 
 ### Contexto
 Este projeto trata-se um aplicativo dos planetas do universo Star Wars.
-Nele é possível explorar pelos diversos planetas de StarWars, ver suas informações, aprender sobre eles e descobrir assuntos relacionados relacionados. 
+Nele é possível explorar pelos diversos planetas de StarWars, ver suas informações, aprender sobre eles e descobrir assuntos relacionados. 
 
 ### Técnologias usadas
 
